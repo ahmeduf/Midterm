@@ -7,5 +7,13 @@ public class Fibonacci {
          */
 
 
+        int prev = 0;
+        int next = 1;
+        for (int i = 1; i < 40; i++) {
+            System.out.print(next + "\t");
+            prev = next - prev;
+            next = next + prev;
+
+        }
     }
 }
