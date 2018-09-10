@@ -60,7 +60,7 @@ Explain exceptions in java and how to handle it?
 A.An exceptions is a problem that arises during the execution of a program. When an Exception occurs the normal
 flow of the program is disrupted and the program/Application terminates abnormally.Java provides two different
 options to handle an exception. We can either use the try-catch-finally approach to handle all kinds of exceptions.
-Or you can use the try-with-resource approach which allows an easier cleanup process for resources.
+Or throws keyword.
 What is static keyword in java? How it has been used in variables and methods ?
 A.The he static keyword denotes that a member variable, or method, can be accessed without requiring an instantiation
 of the class to which it belongswhen static key word is used with a method that method can be called without creating
