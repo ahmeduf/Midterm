@@ -18,10 +18,10 @@ public class Factorial {
         do {
             b*=a;
             a--;
-        } //using Iteration
+        }
         while (a>0);
-        System.out.println("Factorial value of 5!:"+b);
-        System.out.println("Factorial value of 5!:"+c);
+        System.out.println("Factorial value of 5!:"+b); //using Iteration
+        System.out.println("Factorial value of 5!:"+c);// using Recursion
     }
     static int ahmed(int n){
         int c;
