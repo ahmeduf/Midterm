@@ -12,5 +12,24 @@ public class Factorial {
          *
          */
 
+        int a=5;
+        int b=1;
+        int c=ahmed(5);
+        do {
+            b*=a;
+            a--;
+        } //using Iteration
+        while (a>0);
+        System.out.println("Factorial value of 5!:"+b);
+        System.out.println("Factorial value of 5!:"+c);
     }
+    static int ahmed(int n){
+        int c;
+        if (n==1)
+            return 1;
+        else {c=(n*ahmed(n-1));}
+        return c;
+
+    }
+
 }
