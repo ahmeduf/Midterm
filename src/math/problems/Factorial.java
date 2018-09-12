@@ -1,5 +1,7 @@
 package math.problems;
 
+import java.util.Iterator;
+
 /**
  * Created by mrahman on 04/02/18.
  */
@@ -11,6 +13,7 @@ public class Factorial {
          * Write a java program to find Factorial of a given number using Recursion as well as Iteration.
          *
          */
+
 
         int a=5;
         int b=1;
