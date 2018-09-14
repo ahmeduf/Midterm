@@ -27,6 +27,7 @@ public class EmployeeInfo extends AbstractEmployeeClass{
 	private double salary;
 	private int performance;
 
+
 	public static String getCompanyName() {
 		return companyName;
 	}
@@ -122,6 +123,11 @@ public class EmployeeInfo extends AbstractEmployeeClass{
 
 
 		return total;
+	}
+	@Override
+	public void service(){
+		companyName="PNT.EDU";
+		System.out.println(CompanyName+"provide training for selenium,qtp & database from"+address);
 	}
 
 	@Override
