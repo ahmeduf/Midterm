@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo extends AllDepartments implements Employee{
+public class EmployeeInfo extends AbstractEmployeeClass{
 
 	/*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
 	 * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -20,10 +20,62 @@ public class EmployeeInfo extends AllDepartments implements Employee{
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	final static String companyName = "CoderClub";
-	int employeeId;
-	String name;
-	int monthly;
+	static String companyName;
+	private int employeeId;
+	private String empName;
+	private String departmentName;
+	private double salary;
+	private int performance;
+
+	public static String getCompanyName() {
+		return companyName;
+	}
+
+	public static void setCompanyName(String companyName) {
+		EmployeeInfo.companyName = companyName;
+	}
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public int getPerformance() {
+		return performance;
+	}
+
+	public void setPerformance(int performance) {
+		this.performance = performance;
+	}
+
+
 
 	/*
 	 * You must implement the logic for below 2 methods and
@@ -35,30 +87,7 @@ public class EmployeeInfo extends AllDepartments implements Employee{
 	 * you must have multiple constructor.
 	 * Must implement below constructor.
 	 */
-	public EmployeeInfo(){
-		System.out.println("No information available");
-	};
-	public EmployeeInfo(int employeeId){
-		this.employeeId=employeeId;
-		System.out.println("Show ID " + employeeId);
-	}
-	public EmployeeInfo(String name, int employeeId){
-		this.name = name;
-		this.employeeId = employeeId;
-		System.out.println(name + " has ID no: " + employeeId);
-	}
-	public void monthlySalary(int a ){
-		System.out.println("Salary of this month is: "+a);
-	}
-	public void monthlySalary(int a , int b){
-		System.out.println("Salary of last two month is: "+(a+b));
-	}
-	public void monthlySalary(){
-		if (monthly>0){
-			System.out.println("Half Yearly Salary is: "+monthly*6);}
-		else {
-			System.out.println("You are unemployed");
-		}}
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -68,12 +97,7 @@ public class EmployeeInfo extends AllDepartments implements Employee{
 	 *
 	 */
 	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total = 0;
-
-		if (numberOfYearsWithCompany>36){ total = numberOfYearsWithCompany;
-			System.out.println("Your new salary with 10% raise is: ");return total ;
-		}
-		System.out.println("Please enter the duration months with us: "+numberOfYearsWithCompany);
+		int total=0;
 		return total;
 	}
 
@@ -96,34 +120,33 @@ public class EmployeeInfo extends AllDepartments implements Employee{
 		//implement numbers of year from above two dates
 		//Calculate pension
 
+
 		return total;
 	}
 
 	@Override
+	public void describeCompany(String Mission) {
+
+	}
+
+	@Override
 	public int employeeId() {
-		return employeeId;
+		return 0;
 	}
 
 	@Override
 	public String employeeName() {
-		return name;
+		return null;
 	}
 
 	@Override
 	public void assignDepartment() {
-		Scanner s = new Scanner(System.in);
-		String department = s.next();
-		System.out.println("This "+ name + " has been assign to " + department);
 
 	}
 
 	@Override
 	public int calculateSalary() {
-		Scanner s = new Scanner(System.in);
-		int monthly = s.nextInt();
-		this.monthly = monthly;
-		System.out.println("Annual salary is: "+monthly*12);
-		return monthly;
+		return 0;
 	}
 
 	@Override
@@ -132,8 +155,8 @@ public class EmployeeInfo extends AllDepartments implements Employee{
 	}
 
 	@Override
-	public void allDepartment() {
-		System.out.println("The Four Departments of this organization are: " + "/n" +Dep1+"/n"+Dep2+"/n"+Dep3+"/n"+Dep4);
+	public int employeeAge() {
+		return 0;
 	}
 
 	private static class DateConversion {
@@ -170,22 +193,22 @@ public class EmployeeInfo extends AllDepartments implements Employee{
 					date = 6;
 					break;
 				case July:
-					date = 7;
+					date = 1;
 					break;
 				case August:
-					date = 8;
+					date = 1;
 					break;
 				case September:
-					date = 9;
+					date = 1;
 					break;
 				case October:
-					date = 10;
+					date = 1;
 					break;
 				case November:
-					date = 11;
+					date = 1;
 					break;
 				case December:
-					date = 12;
+					date = 1;
 					break;
 				default:
 					date = 0;

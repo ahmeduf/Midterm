@@ -1,5 +1,8 @@
 package datastructure;
 
+import databases.ConnectToMongoDB;
+import databases.ConnectToSqlDB;
+
 import java.util.*;
 
 public class UseMap {
@@ -12,25 +15,27 @@ public class UseMap {
 		 *
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 */
-		List<String> BD=new LinkedList<>();
-		BD.add("RANGPUR");
-		BD.add("DHAKA");
-		BD.add("RAJSHAHI");
-		List<String> USA=new LinkedList<>();
-		USA.add("NEWYORK");
-		USA.add("CHICAGO");
-		USA.add("OHIO");
-		Map<String, List<String>> location= new HashMap<String, List<String>>();
-		location.put("City of BD",BD);
-		location.put("City of USA",USA);
-		for (Map.Entry<String,List<String>> place : location.entrySet()){
-			System.out.println("output:" +place.getKey()+" : "+place.getValue());
+		List<String> firstname=new LinkedList<>();
+		firstname.add("ahmed");
+		firstname.add("fahim");
+		firstname.add("nasir");
+		List<String> nickname=new LinkedList<>();
+		nickname.add("setu");
+		nickname.add("fahimapa");
+		nickname.add("nasiranty");
+		Map<String, List<String>> call= new HashMap<String, List<String>>();
+		call.put("firstname",firstname);
+		call.put("nickname is :",nickname);
+		for (Map.Entry<String,List<String>> place : call.entrySet()){
+			System.out.println("information:" +place.getKey()+" : "+place.getValue());
 		}
-		Iterator it=location.entrySet().iterator();
+		//using iterator
+		Iterator it=call.entrySet().iterator();
 		while (it.hasNext()){
 			System.out.println(it.next());
 		}
 
+		ConnectToMongoDB connectToMongoDB=new ConnectToMongoDB();
 	}
 
 }
